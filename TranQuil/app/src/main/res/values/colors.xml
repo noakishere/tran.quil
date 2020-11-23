@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Natural and Earthy Theme-->
+    <color name="grassy_fields">#8D8741</color>
+    <color name="sky_blue">#659DBD</color>
+    <color name="smooth_sandstone">#DAAD86</color>
+    <color name="earthy_soil">#BC986A</color>
+    <color name="sandy_beach">#FBEEC1</color>
 </resources>
