@@ -25,7 +25,7 @@ public class sos extends AppCompatActivity {
 
         // set highlighted menu
         Menu menu = bottomNavigationView.getMenu();
-        MenuItem menuItem = menu.getItem(3);
+        MenuItem menuItem = menu.getItem(4);
         menuItem.setChecked(true);
 
         // menu navigation
