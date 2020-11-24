@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TranQuil">
-        <activity android:name=".sos"></activity>
+        <activity android:name=".MyProfile"></activity>
+        <activity android:name=".sos" />
         <activity android:name=".Discover" />
         <activity android:name=".Sleep" />
         <activity android:name=".Meditation" />

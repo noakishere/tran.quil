@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sky_blue"
+    tools:context=".MyProfile">
+
+    <!-- Top Navigation Menu for Meditation Page -->
+    <RelativeLayout
+        android:id="@+id/topNavigationMyProfilePage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/earthy_soil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Application Settings ImageButton -->
+        <ImageButton
+            android:id="@+id/appSettingsMyProfilePage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:tint="@color/grassy_fields"
+            android:src="@drawable/ic_default_app_settings"
+            android:scaleType="fitCenter"/>
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Tran • Quil"
+            android:textColor="@color/grassy_fields"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+
+        <!-- Profile Settings ImageButton -->
+        <ImageButton
+            android:id="@+id/exitMyProfileSettingsBtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:tint="@color/grassy_fields"
+            android:src="@drawable/ic_default_cancel"
+            android:scaleType="fitCenter"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

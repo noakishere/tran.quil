@@ -43,7 +43,9 @@ public class Meditation extends AppCompatActivity {
         myProfileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), MyProfile.class);
+                intent.putExtra("currentActivity", "MeditationPage");
+                startActivity(intent);
             }
         });
         appSettingsBtn.setOnClickListener(new View.OnClickListener() {
