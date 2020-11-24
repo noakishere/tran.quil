@@ -31,6 +31,16 @@
             android:src="@drawable/ic_default_app_settings"
             android:scaleType="fitCenter"/>
 
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Tran • Quil"
+            android:textColor="@color/grassy_fields"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+
         <!-- Profile Settings ImageButton -->
         <ImageButton
             android:id="@+id/myProfileBtnSosPage"
