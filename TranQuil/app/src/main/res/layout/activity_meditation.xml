@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/sandy_beach"
+    android:background="@color/sky_blue"
     tools:context=".Meditation">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -15,6 +15,7 @@
         android:background="@color/grassy_fields"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
+        app:itemRippleColor="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -26,7 +27,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="25dp"
-        android:text="Main Menu"
+        android:text="Meditation"
         android:textSize="40sp"
         android:textStyle="bold"
         android:textColor="@color/black"
