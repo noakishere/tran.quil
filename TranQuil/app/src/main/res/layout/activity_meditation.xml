@@ -209,8 +209,8 @@
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_marginRight="15dp"
-                        android:background="@android:color/darker_gray"
-                        android:src="@drawable/ic_image"
+                        app:tint="@color/earthy_soil"
+                        android:src="@drawable/ic_default_meditation"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -266,8 +266,8 @@
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_marginRight="15dp"
-                        android:background="@android:color/darker_gray"
-                        android:src="@drawable/ic_image"
+                        app:tint="@color/earthy_soil"
+                        android:src="@drawable/ic_default_timer"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -323,8 +323,8 @@
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_marginRight="15dp"
-                        android:background="@android:color/darker_gray"
-                        android:src="@drawable/ic_image"
+                        app:tint="@color/earthy_soil"
+                        android:src="@drawable/ic_default_relaxation"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -381,8 +381,8 @@
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_marginRight="15dp"
-                        android:background="@android:color/darker_gray"
-                        android:src="@drawable/ic_image"
+                        app:tint="@color/earthy_soil"
+                        android:src="@drawable/ic_tips_and_tricks"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
