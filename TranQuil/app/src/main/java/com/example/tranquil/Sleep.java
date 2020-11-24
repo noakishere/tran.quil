@@ -35,7 +35,7 @@ public class Sleep extends AppCompatActivity {
         soundEscapeActivity = (ConstraintLayout)findViewById(R.id.soundEscapesContainer);
         sleepMusicActivity = (ConstraintLayout)findViewById(R.id.sleepMusicContainer);
 
-        // declaring Buttons
+        // declaring ImageButtons
         myProfileBtn = (ImageButton)findViewById(R.id.myProfileBtnSleepPage);
         appSettingsBtn = (ImageButton)findViewById(R.id.appSettingsSleepPage);
 

@@ -7,7 +7,7 @@
     android:background="@color/night_blue"
     tools:context=".Sleep">
 
-    <!-- Top Navigation Menu for Sleep Page -->
+    <!-- Top Navigation Bar -->
     <RelativeLayout
         android:id="@+id/topNavigationSleepPage"
         android:layout_width="match_parent"

@@ -7,7 +7,7 @@
     android:background="@color/sky_blue"
     tools:context=".Meditation">
 
-    <!-- Top Navigation Menu for Sleep Page -->
+    <!-- Top Navigation Menu for Meditation Page -->
     <RelativeLayout
         android:id="@+id/topNavigationMeditationPage"
         android:layout_width="match_parent"
@@ -60,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Sleep Page's ScrollView -->
+    <!-- Meditation Page's ScrollView -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"

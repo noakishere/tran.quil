@@ -18,8 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainMenu extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-    ImageButton myProfileBtn;
-    TextView welcomeBackMessageLabel;
+    ImageButton appSettingsBtn, myProfileBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,22 +26,20 @@ public class MainMenu extends AppCompatActivity {
         requestWindowFeature((Window.FEATURE_NO_TITLE)); // hiding the title
         getSupportActionBar().hide(); // hiding the title bar
         setContentView(R.layout.activity_main_menu);
-        bottomNavigationView = findViewById(R.id.bottomNavigationBar);
+        bottomNavigationView = findViewById(R.id.bottomNavigationBarMainMenu);
 
-        // declaring textviews
-        welcomeBackMessageLabel = (TextView)findViewById(R.id.welcomeBackMessageLabel);
-
-        // TESTING PURPOSES ONLY
-        welcomeBackMessageLabel.setText("\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non ultricies orci," +
-                " nec fringilla lacus. Pellentesque finibus purus ut augue posuere mattis quis eget nibh. Pellentesque non dolor" +
-                " auctor, malesuada urna id, tempus lectus.\n\n\t\t\tUt porta aliquet eros non aliquet. Maecenas fermentum eleifend " +
-                "ligula, quis tempor sem imperdiet a. Nulla commodo pulvinar felis eget ultricies.");
-
-        // declaring buttons
+        // declaring ImageButtons
         myProfileBtn = (ImageButton)findViewById(R.id.myProfileBtnMainMenu);
+        appSettingsBtn = (ImageButton)findViewById(R.id.appSettingsMainMenu);
 
-        // click-event for myProfileBtn
+        // registering click events for top navigation
         myProfileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
+            }
+        });
+        appSettingsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();

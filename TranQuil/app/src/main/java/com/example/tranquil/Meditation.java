@@ -35,7 +35,7 @@ public class Meditation extends AppCompatActivity {
         breathingExercises = (ConstraintLayout)findViewById(R.id.breathingExercisesContainer);
         meditationTechniques = (ConstraintLayout)findViewById(R.id.meditationTechniquesContainer);
 
-        // declaring Buttons
+        // declaring ImageButtons
         myProfileBtn = (ImageButton)findViewById(R.id.myProfileBtnMeditationPage);
         appSettingsBtn = (ImageButton)findViewById(R.id.appSettingsMeditationPage);
 

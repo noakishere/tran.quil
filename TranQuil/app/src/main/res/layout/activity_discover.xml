@@ -4,16 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/sky_blue"
     tools:context=".Discover">
 
+    <!-- Top Navigation Bar -->
+    <RelativeLayout
+        android:id="@+id/topNavigationDiscoverPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/earthy_soil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Application Settings ImageButton -->
+        <ImageButton
+            android:id="@+id/appSettingsDiscoverPage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:tint="@color/grassy_fields"
+            android:src="@drawable/ic_default_app_settings"
+            android:scaleType="fitCenter"/>
+
+        <!-- Profile Settings ImageButton -->
+        <ImageButton
+            android:id="@+id/myProfileBtnDiscoverPage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:tint="@color/grassy_fields"
+            android:src="@drawable/ic_default_pfp"
+            android:scaleType="fitCenter"/>
+    </RelativeLayout>
+
+    <!-- Bottom Navigation Menu Bar -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationBar"
+        android:id="@+id/bottomNavigationBarDiscoverPage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_navigation_bar"
         android:background="@color/earthy_soil"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/grassy_fields"
+        app:itemTextColor="@color/grassy_fields"
+        app:itemRippleColor="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
