@@ -226,8 +226,8 @@
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_marginRight="15dp"
-                        android:background="@android:color/darker_gray"
-                        android:src="@drawable/ic_image"
+                        app:tint="@color/night_blue"
+                        android:src="@drawable/ic_default_wind_down"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
