@@ -26,7 +26,7 @@ public class Sleep extends AppCompatActivity {
         requestWindowFeature((Window.FEATURE_NO_TITLE)); // hide the title
         getSupportActionBar().hide(); // hide the title bar
         setContentView(R.layout.activity_sleep);
-        bottomNavigationView = findViewById(R.id.bottomNavigationBar);
+        bottomNavigationView = findViewById(R.id.bottomNavigationBarSleepPage);
 
         // declaring ConstraintLayouts
         featuredActivity = (ConstraintLayout)findViewById(R.id.featuredSleepExercise);

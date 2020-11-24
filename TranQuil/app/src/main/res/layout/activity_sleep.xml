@@ -47,7 +47,7 @@
 
     <!-- Top Navigation Bar Separator -->
     <View
-        android:id="@+id/view2"
+        android:id="@+id/topNavigationBarSeparatorSleepPage"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@color/smooth_sandstone"
@@ -57,7 +57,7 @@
 
     <!-- Bottom Navigation Menu Bar -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationBar"
+        android:id="@+id/bottomNavigationBarSleepPage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_navigation_bar"
@@ -71,11 +71,11 @@
 
     <!-- Bottom Navigation Menu Bar Separator -->
     <View
-        android:id="@+id/view"
+        android:id="@+id/bottomNavigationBarSeparatorSleepPage"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@color/smooth_sandstone"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationBar"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationBarSleepPage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -89,17 +89,17 @@
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationBar"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationBarSeparatorSleepPage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view2">
+        app:layout_constraintTop_toTopOf="@+id/topNavigationBarSeparatorSleepPage">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Today's Featured Exercise -->
+            <!-- Today's Featured Sleep Exercise -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/featuredSleepExercise"
                 android:layout_width="match_parent"
@@ -135,7 +135,7 @@
                     android:layout_height="wrap_content"
                     android:text="exercise-type"
                     android:textColor="@color/sandy_beach"
-                    android:textSize="15sp"
+                    android:textSize="13sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/featuredTitleSleepPage" />

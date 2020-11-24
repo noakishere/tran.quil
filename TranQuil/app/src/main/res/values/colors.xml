@@ -9,11 +9,12 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- Natural and Earthy Theme-->
-    <color name="grassy_fields">#8D8741</color>
-    <color name="sky_blue">#659DBD</color>
+    <color name="grassy_fields">#7B9A53</color>
+    <color name="sky_blue">#007399</color>
     <color name="smooth_sandstone">#DAAD86</color>
-    <color name="earthy_soil">#bc986a</color>
+    <color name="earthy_soil">#634C37</color>
     <color name="sandy_beach">#FBEEC1</color>
     <color name="night_blue">#172138</color>
     <color name="raincloud_blue">#35475F</color>
+    <color name="cloud_white">#F3F2E7</color>
 </resources>
