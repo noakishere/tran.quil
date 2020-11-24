@@ -79,63 +79,333 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Today's Featured Exercise -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/featuredSleepExercise"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+    <!-- Sleep Page's ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topNavigationSleepPage">
+        app:layout_constraintTop_toTopOf="@+id/view2">
 
-        <TextView
-            android:id="@+id/featuredLabelSleepPage"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Featured"
-            android:textSize="15sp"
-            android:textColor="@color/sandy_beach"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/featuredTitleSleepPage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Example Title"
-            android:textColor="@color/smooth_sandstone"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/featuredLabelSleepPage" />
+            <!-- Today's Featured Exercise -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/featuredSleepExercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/featuredExerciseTypeSleepPage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="exercise-type"
-            android:textColor="@color/sandy_beach"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/featuredTitleSleepPage" />
+                <TextView
+                    android:id="@+id/featuredLabelSleepPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Featured"
+                    android:textColor="@color/sandy_beach"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/featuredImageSleepPage"
-            android:layout_width="640px"
-            android:layout_height="360px"
-            android:background="@android:color/darker_gray"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/featuredExerciseTypeSleepPage"
-            app:layout_constraintVertical_bias="0.0"
-            android:src="@drawable/ic_image" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/featuredTitleSleepPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Example Title"
+                    android:textColor="@color/smooth_sandstone"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/featuredLabelSleepPage" />
+
+                <TextView
+                    android:id="@+id/featuredExerciseTypeSleepPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="exercise-type"
+                    android:textColor="@color/sandy_beach"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/featuredTitleSleepPage" />
+
+                <ImageView
+                    android:id="@+id/featuredImageSleepPage"
+                    android:layout_width="640px"
+                    android:layout_height="360px"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@android:color/darker_gray"
+                    android:src="@drawable/ic_image"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/featuredExerciseTypeSleepPage"
+                    app:layout_constraintVertical_bias="0.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Guided Sleep Exercises -->
+            <TextView
+                android:id="@+id/guidedSleepExercisesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Guided Exercises:"
+                android:textSize="20sp"
+                android:textColor="@color/smooth_sandstone"
+                android:textStyle="bold"/>
+
+            <!-- Wind Down Exercises -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginTop="5dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/raincloud_blue">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/windDownExercisesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/windDownSleepExerciseLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Wind Downs"
+                        android:textColor="@color/smooth_sandstone"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/windDownSleepExerciseImage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/windDownSleepExerciseDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="What better way to prepare for sleep than through breathing and meditation?"
+                        android:textColor="@color/sandy_beach"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/windDownSleepExerciseImage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/windDownSleepExerciseLabel" />
+
+                    <ImageView
+                        android:id="@+id/windDownSleepExerciseImage"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@android:color/darker_gray"
+                        android:src="@drawable/ic_image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Sleepcast Exercises -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginTop="15dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/raincloud_blue">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sleepcastExercisesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/sleepcastExerciseLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Sleepcasts"
+                        android:textColor="@color/smooth_sandstone"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/sleepcastExerciseImage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/sleepcastExerciseDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="Bedtime stories told by the most soothing of voices to ease you to sleep."
+                        android:textColor="@color/sandy_beach"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/sleepcastExerciseImage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sleepcastExerciseLabel" />
+
+                    <ImageView
+                        android:id="@+id/sleepcastExerciseImage"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@android:color/darker_gray"
+                        android:src="@drawable/ic_image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Relaxing Sounds -->
+            <TextView
+                android:id="@+id/relaxingSleepSoundsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:text="Relaxing Sounds:"
+                android:textSize="20sp"
+                android:textColor="@color/smooth_sandstone"
+                android:textStyle="bold"/>
+
+            <!-- Sound Escapes -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginTop="15dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/raincloud_blue">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/soundEscapesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/soundEscapesExerciseLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Sound Escapes"
+                        android:textColor="@color/smooth_sandstone"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/soundEscapesExerciseImage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/soundEscapesDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="Escape the bounderies of your room, and enter a whole new world of relaxation."
+                        android:textColor="@color/sandy_beach"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/soundEscapesExerciseImage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/soundEscapesExerciseLabel" />
+
+                    <ImageView
+                        android:id="@+id/soundEscapesExerciseImage"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@android:color/darker_gray"
+                        android:src="@drawable/ic_image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Sleep Music -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="25dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/raincloud_blue">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sleepMusicContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/sleepMusicExerciseLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Sleep Music"
+                        android:textColor="@color/smooth_sandstone"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/sleepMusicExerciseImage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/sleepMusicDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="Allow yourself to drift off to sleep with these calm soundtracks."
+                        android:textColor="@color/sandy_beach"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/sleepMusicExerciseImage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sleepMusicExerciseLabel" />
+
+                    <ImageView
+                        android:id="@+id/sleepMusicExerciseImage"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@android:color/darker_gray"
+                        android:src="@drawable/ic_image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

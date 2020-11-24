@@ -2,6 +2,7 @@ package com.example.tranquil;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class Sleep extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     ImageButton appSettingsBtn, myProfileBtn;
+    ConstraintLayout featuredActivity, windDownActivity, sleepcastActivity, soundEscapeActivity, sleepMusicActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,13 @@ public class Sleep extends AppCompatActivity {
         getSupportActionBar().hide(); // hide the title bar
         setContentView(R.layout.activity_sleep);
         bottomNavigationView = findViewById(R.id.bottomNavigationBar);
+
+        // declaring ConstraintLayouts
+        featuredActivity = (ConstraintLayout)findViewById(R.id.featuredSleepExercise);
+        windDownActivity = (ConstraintLayout)findViewById(R.id.windDownExercisesContainer);
+        sleepcastActivity = (ConstraintLayout)findViewById(R.id.sleepcastExercisesContainer);
+        soundEscapeActivity = (ConstraintLayout)findViewById(R.id.soundEscapesContainer);
+        sleepMusicActivity = (ConstraintLayout)findViewById(R.id.sleepMusicContainer);
 
         // declaring Buttons
         myProfileBtn = (ImageButton)findViewById(R.id.myProfileBtnSleepPage);
@@ -35,16 +44,46 @@ public class Sleep extends AppCompatActivity {
         MenuItem menuItem = menu.getItem(2);
         menuItem.setChecked(true);
 
-        // click-event for myProfileBtn
+        // registering click events for top navigation
         myProfileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
             }
         });
-        
-        // click-event for appSettingsBtn
         appSettingsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        // registering click events for sleep activities
+        featuredActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
+            }
+        });
+        windDownActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
+            }
+        });
+        sleepcastActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
+            }
+        });
+        soundEscapeActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
+            }
+        });
+        sleepMusicActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
