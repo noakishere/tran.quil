@@ -7,6 +7,55 @@
     android:background="@color/night_blue"
     tools:context=".Sleep">
 
+    <!-- Top Navigation Menu for Sleep Page -->
+    <RelativeLayout
+        android:id="@+id/topNavigationSleepPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Application Settings ImageButton -->
+        <ImageButton
+            android:id="@+id/appSettingsSleepPage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:tint="@color/smooth_sandstone"
+            android:src="@drawable/ic_default_app_settings"
+            android:scaleType="fitCenter"/>
+
+        <!-- Profile Settings ImageButton -->
+        <ImageButton
+            android:id="@+id/myProfileBtnSleepPage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:tint="@color/smooth_sandstone"
+            android:src="@drawable/ic_default_pfp"
+            android:scaleType="fitCenter"/>
+    </RelativeLayout>
+
+    <!-- Top Navigation Bar Separator -->
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/smooth_sandstone"
+        app:layout_constraintBottom_toBottomOf="@id/topNavigationSleepPage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Bottom Navigation Menu Bar -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationBar"
         android:layout_width="match_parent"
@@ -20,11 +69,73 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Bottom Navigation Menu Bar Separator -->
     <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@color/smooth_sandstone"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Today's Featured Exercise -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/featuredSleepExercise"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topNavigationSleepPage">
+
+        <TextView
+            android:id="@+id/featuredLabelSleepPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Featured"
+            android:textSize="15sp"
+            android:textColor="@color/sandy_beach"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/featuredTitleSleepPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Example Title"
+            android:textColor="@color/smooth_sandstone"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/featuredLabelSleepPage" />
+
+        <TextView
+            android:id="@+id/featuredExerciseTypeSleepPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="exercise-type"
+            android:textColor="@color/sandy_beach"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/featuredTitleSleepPage" />
+
+        <ImageView
+            android:id="@+id/featuredImageSleepPage"
+            android:layout_width="640px"
+            android:layout_height="360px"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/featuredExerciseTypeSleepPage"
+            app:layout_constraintVertical_bias="0.0"
+            android:src="@drawable/ic_image" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
