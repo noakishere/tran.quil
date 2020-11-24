@@ -7,21 +7,47 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainMenu extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-
+    ImageButton myProfileBtn;
+    TextView welcomeBackMessageLabel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature((Window.FEATURE_NO_TITLE)); // hide the title
-        getSupportActionBar().hide(); // hide the title bar
+        requestWindowFeature((Window.FEATURE_NO_TITLE)); // hiding the title
+        getSupportActionBar().hide(); // hiding the title bar
         setContentView(R.layout.activity_main_menu);
         bottomNavigationView = findViewById(R.id.bottomNavigationBar);
+
+        // declaring textviews
+        welcomeBackMessageLabel = (TextView)findViewById(R.id.welcomeBackMessageLabel);
+
+        // TESTING PURPOSES ONLY
+        welcomeBackMessageLabel.setText("\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non ultricies orci," +
+                " nec fringilla lacus. Pellentesque finibus purus ut augue posuere mattis quis eget nibh. Pellentesque non dolor" +
+                " auctor, malesuada urna id, tempus lectus.\n\n\t\t\tUt porta aliquet eros non aliquet. Maecenas fermentum eleifend " +
+                "ligula, quis tempor sem imperdiet a. Nulla commodo pulvinar felis eget ultricies.");
+
+        // declaring buttons
+        myProfileBtn = (ImageButton)findViewById(R.id.myProfileBtnMainMenu);
+
+        // click-event for myProfileBtn
+        myProfileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
+            }
+        });
 
         // set highlighted menu
         Menu menu = bottomNavigationView.getMenu();
