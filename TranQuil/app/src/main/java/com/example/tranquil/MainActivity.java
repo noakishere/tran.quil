@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // load directly into Main Menu (until login/registration page has been implemented
-//        Intent intent = new Intent(MainActivity.this, MainMenu.class);
-//        startActivity(intent);
+        Intent intent = new Intent(MainActivity.this, MainMenu.class);
+        startActivity(intent);
     }
 
 

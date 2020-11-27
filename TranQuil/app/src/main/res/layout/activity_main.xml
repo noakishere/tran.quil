@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grassy_fields"
+    android:background="@color/sky_blue"
     tools:context=".MainActivity">
 
     <!-- App Name -->
@@ -121,7 +121,7 @@
         android:layout_width="125dp"
         android:layout_height="60dp"
         android:layout_marginTop="25dp"
-        app:cardBackgroundColor="@color/earthy_soil"
+        app:cardBackgroundColor="@color/grassy_fields"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
