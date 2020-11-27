@@ -23,8 +23,8 @@
     <!-- App Logo -->
     <ImageView
         android:id="@+id/appLogoLoginScreen"
-        android:layout_width="640px"
-        android:layout_height="360px"
+        android:layout_width="150dp"
+        android:layout_height="160dp"
         android:layout_marginTop="5dp"
         android:src="@drawable/placeholder1"
         app:layout_constraintEnd_toEndOf="parent"

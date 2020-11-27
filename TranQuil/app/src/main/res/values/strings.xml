@@ -13,7 +13,7 @@
     <!-- Register page string resources -->
 
 
-    <!-- CHECK FOR REMOVAL -->
+    <!-- Cannot remove without affect manifest -->
     <string name="title_activity_register">Register</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
