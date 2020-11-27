@@ -8,9 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- System Colours -->
-    <color name="system_red">#ff3333</color>
-
     <!-- Natural and Earthy Theme-->
     <color name="grassy_fields">#7B9A53</color>
     <color name="sky_blue">#2c445c</color>

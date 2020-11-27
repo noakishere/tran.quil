@@ -3,6 +3,15 @@
     <string name="app_name">Tran • Quil</string>
     <string name="app_slogan">app-slogan-goes-here</string>
 
+    <!-- Login page string resources -->
+    <string name="app_logo_desc">TranQuil\'s logo.</string>
+    <string name="login_username_hint">Username</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_button_text">LOGIN AS USER</string>
+    <string name="register_new_user_button_text">Don\'t have an account?\nREGISTER NOW!"</string>
+
+    <!-- Register page string resources -->
+
 
     <!-- CHECK FOR REMOVAL -->
     <string name="title_activity_register">Register</string>

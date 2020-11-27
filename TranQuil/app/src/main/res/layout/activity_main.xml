@@ -29,7 +29,8 @@
         android:src="@drawable/placeholder1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appNameLoginScreen" />
+        app:layout_constraintTop_toBottomOf="@+id/appNameLoginScreen"
+        android:contentDescription="@string/app_logo_desc" />
 
     <!-- App Slogan -->
     <TextView
@@ -76,12 +77,14 @@
                 android:drawableLeft="@drawable/ic_default_pfp_filled"
                 android:drawablePadding="10dp"
                 android:drawableTint="@color/earthy_soil"
-                android:hint="Username"
+                android:hint="@string/login_username_hint"
                 android:paddingLeft="2dp"
                 android:paddingRight="2dp"
                 android:textColor="@color/earthy_soil"
                 android:textColorHint="@color/earthy_soil"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:inputType="text"
+                android:drawableStart="@drawable/ic_default_pfp_filled" />
         </androidx.cardview.widget.CardView>
 
         <!-- Password TextField -->
@@ -105,13 +108,15 @@
                 android:drawableLeft="@drawable/ic_default_lock_filled"
                 android:drawablePadding="10dp"
                 android:drawableTint="@color/earthy_soil"
-                android:hint="Password"
+                android:hint="@string/login_password_hint"
                 android:inputType="textPassword"
                 android:paddingLeft="2dp"
                 android:paddingRight="2dp"
                 android:textColor="@color/earthy_soil"
                 android:textColorHint="@color/earthy_soil"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                tools:targetApi="m"
+                android:drawableStart="@drawable/ic_default_lock_filled" />
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 
@@ -133,8 +138,8 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
-            android:text="LOGIN AS USER"
-            android:textSize="15dp"
+            android:text="@string/login_button_text"
+            android:textSize="15sp"
             android:textColor="@color/sandy_beach"/>
     </androidx.cardview.widget.CardView>
 
@@ -146,14 +151,14 @@
         android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
         android:gravity="center"
-        android:text="Don't have an account?\nREGISTER NOW!"
+        android:text="@string/register_new_user_button_text"
         android:textColor="@color/sandy_beach"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButtonContainerLoginPage" />
 
-    <!-- Social Media links (buttons) -->
+    <!-- Social Media links -->
     <LinearLayout
         android:id="@+id/socialLinksContainerLoginPage"
         android:layout_width="wrap_content"
