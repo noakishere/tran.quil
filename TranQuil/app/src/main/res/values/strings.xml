@@ -11,7 +11,7 @@
     <string name="register_new_user_button_text">Don\'t have an account?\nREGISTER NOW!"</string>
 
     <!-- Register page string resources -->
-
+    <string name="register_new_account_button_text">REGISTER ACCOUNT</string>
 
     <!-- Cannot remove without affect manifest -->
     <string name="title_activity_register">Register</string>
