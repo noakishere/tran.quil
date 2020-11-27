@@ -57,7 +57,7 @@
 
         <!-- Username TextField -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/usernameLoginPage"
+            android:id="@+id/usernameContainerLoginPage"
             android:layout_width="275dp"
             android:layout_height="45dp"
             android:layout_marginTop="5dp"
@@ -86,7 +86,7 @@
 
         <!-- Password TextField -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/passwordLoginPage"
+            android:id="@+id/passwordContainerLoginPage"
             android:layout_width="275dp"
             android:layout_height="45dp"
             android:layout_marginTop="15dp"
