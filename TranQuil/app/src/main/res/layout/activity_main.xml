@@ -47,7 +47,7 @@
 
     <!-- Username and Password Area -->
     <LinearLayout
-        android:id="@+id/usernamePasswordContainer"
+        android:id="@+id/usernamePasswordContainerLoginPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
@@ -100,7 +100,7 @@
             tools:layout_editor_absoluteY="289dp">
 
             <EditText
-                android:id="@+id/passwordTextFieldLoginPage"
+                android:id="@+id/passwordEditTextLoginPage"
                 android:layout_width="260dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -130,7 +130,7 @@
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usernamePasswordContainer">
+        app:layout_constraintTop_toBottomOf="@+id/usernamePasswordContainerLoginPage">
 
         <Button
             android:id="@+id/loginButtonLoginPage"

@@ -46,154 +46,146 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appLogoLoginScreen" />
 
-    <!-- User Personal Information and Account Information -->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+    <!-- User Account Information -->
+    <LinearLayout
+        android:id="@+id/userAccountInformationContainerRegisterPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
-        android:layout_marginBottom="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appSloganLoginPage">
 
-        <!-- User Account Information -->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/userAccountInformationContainerRegisterPage"
+        <!-- UserFullName TextField -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/userFullNameContainerRegisterPage"
+            android:layout_width="275dp"
+            android:layout_height="45dp"
+            app:cardBackgroundColor="@color/sandy_beach"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="289dp">
+
+            <EditText
+                android:id="@+id/userFullNameEditTextRegisterPage"
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_default_pfp_filled"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/earthy_soil"
+                android:hint="@string/login_user_full_name_hint"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:textColor="@color/earthy_soil"
+                android:textColorHint="@color/earthy_soil"
+                android:textSize="18sp"
+                android:inputType="text"
+                android:drawableStart="@drawable/ic_default_pfp_filled" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Username TextField -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/usernameContainerRegisterPage"
+            android:layout_width="275dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/sandy_beach"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="289dp">
+
+            <EditText
+                android:id="@+id/usernameEditTextRegisterPage"
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_default_pfp_filled"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/earthy_soil"
+                android:hint="@string/login_username_hint"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:textColor="@color/earthy_soil"
+                android:textColorHint="@color/earthy_soil"
+                android:textSize="18sp"
+                android:inputType="text"
+                android:drawableStart="@drawable/ic_default_pfp_filled" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Password TextField -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/passwordContainerRegisterPage"
+            android:layout_width="275dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/sandy_beach"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="289dp">
+
+            <EditText
+                android:id="@+id/passwordEditTextRegisterPage"
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_default_lock_filled"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/earthy_soil"
+                android:hint="@string/login_password_hint"
+                android:inputType="textPassword"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:textColor="@color/earthy_soil"
+                android:textColorHint="@color/earthy_soil"
+                android:textSize="18sp"
+                tools:targetApi="m"
+                android:drawableStart="@drawable/ic_default_lock_filled" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <!-- Register as New User -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/registerNewUserButtonContainerRegisterPage"
+        android:layout_width="125dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="25dp"
+        app:cardBackgroundColor="@color/grassy_fields"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userAccountInformationContainerRegisterPage">
+
+        <Button
+            android:id="@+id/registerButtonRegisterPage"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:text="@string/register_new_user_button_text_register_page"
+            android:textSize="15sp"
+            android:textColor="@color/sandy_beach"/>
+    </androidx.cardview.widget.CardView>
 
-            <!-- User First Name -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/userFirstNameContainerRegisterPage"
-                android:layout_width="275dp"
-                android:layout_height="45dp"
-                app:cardBackgroundColor="@color/sandy_beach"
-                app:cardCornerRadius="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <EditText
-                    android:id="@+id/userFirstNameEditTextRegisterPage"
-                    android:layout_width="260dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@android:color/transparent"
-                    android:drawableLeft="@drawable/ic_default_pfp_filled"
-                    android:drawablePadding="10dp"
-                    android:drawableTint="@color/earthy_soil"
-                    android:hint="First Name"
-                    android:paddingLeft="2dp"
-                    android:paddingRight="2dp"
-                    android:textColor="@color/earthy_soil"
-                    android:textColorHint="@color/earthy_soil"
-                    android:textSize="18sp"
-                    android:inputType="text"
-                    android:drawableStart="@drawable/ic_default_pfp_filled" />
-            </androidx.cardview.widget.CardView>
-
-            <!-- User Last Name -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/userLastNameContainerRegisterPage"
-                android:layout_width="275dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="15dp"
-                app:cardBackgroundColor="@color/sandy_beach"
-                app:cardCornerRadius="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/userFirstNameContainerRegisterPage">
-
-                <EditText
-                    android:id="@+id/userLastNameEditTextRegisterPage"
-                    android:layout_width="260dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@android:color/transparent"
-                    android:drawableStart="@drawable/ic_default_pfp_filled"
-                    android:drawableLeft="@drawable/ic_default_pfp_filled"
-                    android:drawablePadding="10dp"
-                    android:drawableTint="@color/earthy_soil"
-                    android:hint="Last Name"
-                    android:inputType="text"
-                    android:paddingLeft="2dp"
-                    android:paddingRight="2dp"
-                    android:textColor="@color/earthy_soil"
-                    android:textColorHint="@color/earthy_soil"
-                    android:textSize="18sp" />
-            </androidx.cardview.widget.CardView>
-
-            <LinearLayout
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/userLastNameContainerRegisterPage">
-
-                <!-- User Age Name -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/userAgeContainerRegisterPage"
-                    android:layout_width="125dp"
-                    android:layout_height="45dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="1"
-                    app:cardBackgroundColor="@color/sandy_beach"
-                    app:cardCornerRadius="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/userFirstNameContainerRegisterPage">
-
-                    <EditText
-                        android:id="@+id/userAgeEditTextRegisterPage"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:background="@android:color/transparent"
-                        android:drawableStart="@drawable/ic_default_pfp_filled"
-                        android:drawableLeft="@drawable/ic_default_pfp_filled"
-                        android:drawablePadding="10dp"
-                        android:drawableTint="@color/earthy_soil"
-                        android:hint="Age"
-                        android:inputType="text"
-                        android:paddingLeft="2dp"
-                        android:paddingRight="2dp"
-                        android:textColor="@color/earthy_soil"
-                        android:textColorHint="@color/earthy_soil"
-                        android:textSize="18sp" />
-                </androidx.cardview.widget.CardView>
-
-                <!-- User Sex -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/userSexContainerRegisterPage"
-                    android:layout_width="125dp"
-                    android:layout_height="45dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    app:cardBackgroundColor="@color/sandy_beach"
-                    app:cardCornerRadius="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/userFirstNameContainerRegisterPage">
-
-                    <EditText
-                        android:id="@+id/userSexEditTextRegisterPage"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:background="@android:color/transparent"
-                        android:drawableStart="@drawable/ic_default_pfp_filled"
-                        android:drawableLeft="@drawable/ic_default_pfp_filled"
-                        android:drawablePadding="10dp"
-                        android:drawableTint="@color/earthy_soil"
-                        android:hint="Sex"
-                        android:inputType="text"
-                        android:paddingLeft="2dp"
-                        android:paddingRight="2dp"
-                        android:textColor="@color/earthy_soil"
-                        android:textColorHint="@color/earthy_soil"
-                        android:textSize="18sp" />
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    <!-- Login as Existing User (return to login page) -->
+    <Button
+        android:id="@+id/loginAsExistingUserButtonRegisterPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="@string/login_as_existing_user_button_text"
+        android:textColor="@color/sandy_beach"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerNewUserButtonContainerRegisterPage" />
 </androidx.constraintlayout.widget.ConstraintLayout>

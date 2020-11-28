@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         // declare views
         usernameEditText = (EditText)findViewById(R.id.usernameEditTextLoginPage);
-        passwordEditText = (EditText)findViewById(R.id.passwordTextFieldLoginPage);
+        passwordEditText = (EditText)findViewById(R.id.passwordEditTextLoginPage);
         loginBtn = (Button)findViewById(R.id.loginButtonLoginPage);
         registerNewUserBtn = (Button)findViewById(R.id.registerNewUserButtonLoginPage);
 
@@ -51,35 +51,44 @@ public class MainActivity extends AppCompatActivity {
         String username = usernameEditText.getText().toString();
         String password = passwordEditText.getText().toString();
 
-        // validate username and password in database
-        // username or password is left blank
+        // validate userFullName, username and password are not blank
         if(username.equals("") || password.equals("")){
-            Toast.makeText(getApplicationContext(), "No fields can be left empty!", Toast.LENGTH_SHORT).show();
-            usernameEditText.setError("Cannot be left blank.");
-            passwordEditText.setError("Cannot be left blank.");
+            Toast.makeText(getApplicationContext(), "No fields can be left blank!", Toast.LENGTH_SHORT).show();
+
+            // username is left blank
+            if(username.equals("")){
+                usernameEditText.setError("Cannot be left blank.");
+            }
+            // password is left blank
+            if(password.equals("")){
+                passwordEditText.setError("Cannot be left blank.");
+            }
         }
-        // username and password are correct
-        else if(validateUserCredentials() == 0){
-            Toast.makeText(getApplicationContext(), "User login is currently not supported...", Toast.LENGTH_LONG).show(); // remove once database is working
-            Intent intent = new Intent(getApplicationContext(), MainMenu.class);
-            intent.putExtra("username", username);
-            startActivity(intent);
-        }
-        // username and password is incorrect
-        else if(validateUserCredentials() == 1){
-            Toast.makeText(getApplicationContext(), "Invalid username and password!", Toast.LENGTH_LONG).show();
-            usernameEditText.setError("Username does not exist.");
-            passwordEditText.setError("Invalid password.");
-        }
-        // username is correct and password is incorrect
-        else if(validateUserCredentials() == 2){
-            Toast.makeText(getApplicationContext(), "Invalid password!", Toast.LENGTH_SHORT).show();
-            passwordEditText.setError("Invalid password.");
-        }
-        // username is incorrect and password is correct
+        // validate username and password in database
         else{
-            Toast.makeText(getApplicationContext(), "Invalid username!", Toast.LENGTH_SHORT).show();
-            usernameEditText.setError("Username does not exist.");
+            // username and password are correct
+            if(validateUserCredentials(username, password) == 0){
+                Toast.makeText(getApplicationContext(), "User login is currently not supported...", Toast.LENGTH_LONG).show(); // remove once database is working
+                Intent intent = new Intent(getApplicationContext(), MainMenu.class);
+                intent.putExtra("username", username);
+                startActivity(intent);
+            }
+            // username and password is incorrect
+            else if(validateUserCredentials(username, password) == 1){
+                Toast.makeText(getApplicationContext(), "Invalid username and password!", Toast.LENGTH_LONG).show();
+                usernameEditText.setError("Username does not exist.");
+                passwordEditText.setError("Invalid password.");
+            }
+            // username is correct and password is incorrect
+            else if(validateUserCredentials(username, password) == 2){
+                Toast.makeText(getApplicationContext(), "Invalid password!", Toast.LENGTH_SHORT).show();
+                passwordEditText.setError("Invalid password.");
+            }
+            // username is incorrect and password is correct
+            else if(validateUserCredentials(username, password) == 3){
+                Toast.makeText(getApplicationContext(), "Invalid username!", Toast.LENGTH_SHORT).show();
+                usernameEditText.setError("Username does not exist.");
+            }
         }
     }
 
@@ -90,11 +99,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // validates username and password in the database (to be supported)
-    private int validateUserCredentials(){
+    private int validateUserCredentials(String username, String password){
         // return 0 if username and password are correct
         // return 1 if username and password are incorrect
         // return 2 if username is correct and password is incorrect
         // return 3 if username is incorrect and password is correct
-        return 0;
+        return 3;
     }
 }
