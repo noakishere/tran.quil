@@ -104,6 +104,6 @@ public class MainActivity extends AppCompatActivity {
         // return 1 if username and password are incorrect
         // return 2 if username is correct and password is incorrect
         // return 3 if username is incorrect and password is correct
-        return 3;
+        return 0;
     }
 }
