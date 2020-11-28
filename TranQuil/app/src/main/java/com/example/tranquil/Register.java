@@ -37,6 +37,15 @@ public class Register extends AppCompatActivity {
                 registerAccount();
             }
         });
+
+        // register click event for loginAsExistingUserBtn
+        loginAsExistingUserBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     // validates entered information, creates a new account, and returns the user back to
