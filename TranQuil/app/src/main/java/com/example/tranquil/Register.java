@@ -45,23 +45,21 @@ public class Register extends AppCompatActivity {
                 String pw = passwordEditText.getText().toString().trim();
                 String userName = userFullNameEditText.getText().toString().trim();
 
-                if(TextUtils.isEmpty(email)){
-                    emailEditText.setError("Email is Required.");
-                    return;
-                }
-
-                if(TextUtils.isEmpty(pw)){
-                    passwordEditText.setError("Password is Required.");
-                    return;
-                }
-
-                if(TextUtils.isEmpty(userName)){
-                    userFullNameEditText.setError("Name is Required.");
+                // validate if userName, email and password textfields are empty
+                if(TextUtils.isEmpty(userName) || TextUtils.isEmpty(email) || TextUtils.isEmpty(pw)) {
+                    if(TextUtils.isEmpty(userName)){
+                        userFullNameEditText.setError("Name is Required.");
+                    }
+                    if(TextUtils.isEmpty(email)){
+                        emailEditText.setError("Email is Required.");
+                    }
+                    if(TextUtils.isEmpty(pw)){
+                        passwordEditText.setError("Password is Required.");
+                    }
                     return;
                 }
 
                 // register the user in firebase
-
                 fAuth.createUserWithEmailAndPassword(email, pw).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -74,8 +72,6 @@ public class Register extends AppCompatActivity {
                         }
                     }
                 });
-
-
             }
         });
 

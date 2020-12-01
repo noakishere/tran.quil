@@ -46,18 +46,18 @@ public class MainActivity extends AppCompatActivity {
                 String email = emailEditText.getText().toString().trim();
                 String pw = passwordEditText.getText().toString().trim();
 
-                if(TextUtils.isEmpty(email)){
-                    emailEditText.setError("Email is Required.");
-                    return;
-                }
-
-                if(TextUtils.isEmpty(pw)){
-                    passwordEditText.setError("Password is Required.");
+                // validate if textfields are empty
+                if(TextUtils.isEmpty(email) || TextUtils.isEmpty(pw)){
+                    if(TextUtils.isEmpty(email)){
+                        emailEditText.setError("Email is Required.");
+                    }
+                    if(TextUtils.isEmpty(pw)){
+                        passwordEditText.setError("Password is Required.");
+                    }
                     return;
                 }
 
                 //authenticate the user
-
                 fAuth.signInWithEmailAndPassword(email, pw).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -86,14 +86,5 @@ public class MainActivity extends AppCompatActivity {
     private void registerAsNewUser(){
         Intent intent = new Intent(getApplicationContext(), Register.class);
         startActivity(intent);
-    }
-
-    // validates username and password in the database (to be supported)
-    private int validateUserCredentials(String username, String password){
-        // return 0 if username and password are correct
-        // return 1 if username and password are incorrect
-        // return 2 if username is correct and password is incorrect
-        // return 3 if username is incorrect and password is correct
-        return 0;
     }
 }
