@@ -1,19 +1,27 @@
 package com.example.tranquil;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
-    EditText usernameEditText, passwordEditText;
+    EditText emailEditText, passwordEditText;
     Button loginBtn, registerNewUserBtn;
+
+    FirebaseAuth fAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,16 +31,45 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // declare views
-        usernameEditText = (EditText)findViewById(R.id.usernameEditTextLoginPage);
+        emailEditText = (EditText)findViewById(R.id.emailEditTextLoginPage);
         passwordEditText = (EditText)findViewById(R.id.passwordEditTextLoginPage);
         loginBtn = (Button)findViewById(R.id.loginButtonLoginPage);
         registerNewUserBtn = (Button)findViewById(R.id.registerNewUserButtonLoginPage);
+
+        //Instantiate firebase authenticator
+        fAuth = FirebaseAuth.getInstance();
 
         // register click event for loginBtn
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loginAsExistingUser();
+                String email = emailEditText.getText().toString().trim();
+                String pw = passwordEditText.getText().toString().trim();
+
+                if(TextUtils.isEmpty(email)){
+                    emailEditText.setError("Email is Required.");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(pw)){
+                    passwordEditText.setError("Password is Required.");
+                    return;
+                }
+
+                //authenticate the user
+
+                fAuth.signInWithEmailAndPassword(email, pw).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(MainActivity.this, "Logged in Successfully.", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), MainMenu.class));
+                        }
+                        else {
+                            Toast.makeText(MainActivity.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             }
         });
 
@@ -43,53 +80,6 @@ public class MainActivity extends AppCompatActivity {
                 registerAsNewUser();
             }
         });
-    }
-
-    // validates user information, and logs in user to the main screen (main menu page)
-    private void loginAsExistingUser(){
-        // collect username and password from text fields
-        String username = usernameEditText.getText().toString();
-        String password = passwordEditText.getText().toString();
-
-        // validate userFullName, username and password are not blank
-        if(username.equals("") || password.equals("")){
-            Toast.makeText(getApplicationContext(), "No fields can be left blank!", Toast.LENGTH_SHORT).show();
-
-            // username is left blank
-            if(username.equals("")){
-                usernameEditText.setError("Cannot be left blank.");
-            }
-            // password is left blank
-            if(password.equals("")){
-                passwordEditText.setError("Cannot be left blank.");
-            }
-        }
-        // validate username and password in database
-        else{
-            // username and password are correct
-            if(validateUserCredentials(username, password) == 0){
-                Toast.makeText(getApplicationContext(), "User login is currently not supported...", Toast.LENGTH_LONG).show(); // remove once database is working
-                Intent intent = new Intent(getApplicationContext(), MainMenu.class);
-                intent.putExtra("username", username);
-                startActivity(intent);
-            }
-            // username and password is incorrect
-            else if(validateUserCredentials(username, password) == 1){
-                Toast.makeText(getApplicationContext(), "Invalid username and password!", Toast.LENGTH_LONG).show();
-                usernameEditText.setError("Username does not exist.");
-                passwordEditText.setError("Invalid password.");
-            }
-            // username is correct and password is incorrect
-            else if(validateUserCredentials(username, password) == 2){
-                Toast.makeText(getApplicationContext(), "Invalid password!", Toast.LENGTH_SHORT).show();
-                passwordEditText.setError("Invalid password.");
-            }
-            // username is incorrect and password is correct
-            else if(validateUserCredentials(username, password) == 3){
-                Toast.makeText(getApplicationContext(), "Invalid username!", Toast.LENGTH_SHORT).show();
-                usernameEditText.setError("Username does not exist.");
-            }
-        }
     }
 
     // opens the Register page to create a new account
