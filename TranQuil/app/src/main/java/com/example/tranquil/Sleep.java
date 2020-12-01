@@ -22,6 +22,8 @@ public class Sleep extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature((Window.FEATURE_NO_TITLE)); // hide title
+        getSupportActionBar().hide(); // hide title bar
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_sleep);
