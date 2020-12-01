@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "518660009728",
+    "firebase_url": "https://tranquil-68fa6.firebaseio.com",
+    "project_id": "tranquil-68fa6",
+    "storage_bucket": "tranquil-68fa6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518660009728:android:d2101ad93a7a991407cde5",
+        "android_client_info": {
+          "package_name": "com.example.tranquil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518660009728-r54mdkv4t07fga4jahmk6g8tc1s1aofb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_5TNKmT90SkV-9WKI31W8QKP463SIRtY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518660009728-r54mdkv4t07fga4jahmk6g8tc1s1aofb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

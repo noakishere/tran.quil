@@ -100,7 +100,7 @@
             tools:layout_editor_absoluteY="289dp">
 
             <EditText
-                android:id="@+id/usernameEditTextRegisterPage"
+                android:id="@+id/emailEditTextRegisterPage"
                 android:layout_width="260dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -108,7 +108,7 @@
                 android:drawableLeft="@drawable/ic_default_pfp_filled"
                 android:drawablePadding="10dp"
                 android:drawableTint="@color/earthy_soil"
-                android:hint="@string/login_username_hint"
+                android:hint="Email"
                 android:paddingLeft="2dp"
                 android:paddingRight="2dp"
                 android:textColor="@color/earthy_soil"
