@@ -163,6 +163,7 @@
 
                     <!-- User Minutes Spent Meditating -->
                     <TextView
+                        android:id="@+id/userTimeSpentMeditatingValueProfilePage"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -173,6 +174,7 @@
 
                     <!-- Label -->
                     <TextView
+                        android:id="@+id/userTimeSpentMeditatingLabelProfilePage"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -191,6 +193,7 @@
 
                     <!-- User's Number of Lessons Completed -->
                     <TextView
+                        android:id="@+id/userLessonsCompletedValueProfilePage"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -201,6 +204,7 @@
 
                     <!-- Label -->
                     <TextView
+                        android:id="@+id/userLessonsCompletedLabelProfilePage"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -219,6 +223,7 @@
 
                     <!-- User's Number of Activities Completed -->
                     <TextView
+                        android:id="@+id/userActivitiesCompletedValueProfilePage"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -229,6 +234,7 @@
 
                     <!-- Label -->
                     <TextView
+                        android:id="@+id/userActivitiesCompletedLabelProfilePage"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -249,10 +255,320 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/userAccomplishmentsContainer" />
 
-            <!-- User Accomplishments Separator -->
-
             <!-- User Account Information -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                app:cardBackgroundColor="@color/grassy_fields"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separator2ProfilePage">
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Account Information Label -->
+                    <TextView
+                        android:id="@+id/accountInformationLabelProfilePage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Account Information:"
+                        android:textColor="@color/cloud_white"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- User Full Name Label -->
+                    <TextView
+                        android:id="@+id/userNameLabelProfilePage"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Name:"
+                        android:textColor="@color/cloud_white"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/accountInformationLabelProfilePage" />
+
+                    <!-- User Full Name Value -->
+                    <EditText
+                        android:id="@+id/userNameValueProfilePage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/grassy_fields"
+                        android:enabled="false"
+                        android:text="user-full-name"
+                        android:textColor="@color/earthy_soil"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/userNameLabelProfilePage"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/userNameLabelProfilePage"
+                        app:layout_constraintTop_toTopOf="@+id/userNameLabelProfilePage" />
+
+                    <!-- User Age Label -->
+                    <TextView
+                        android:id="@+id/userAgeLabelProfilePage"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Age:"
+                        android:textColor="@color/cloud_white"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/userNameLabelProfilePage" />
+
+                    <!-- User Age Value -->
+                    <EditText
+                        android:id="@+id/userAgeValueProfilePage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@android:color/transparent"
+                        android:enabled="false"
+                        android:text="user-age"
+                        android:textColor="@color/earthy_soil"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/userAgeLabelProfilePage"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/userAgeLabelProfilePage"
+                        app:layout_constraintTop_toTopOf="@+id/userAgeLabelProfilePage" />
+
+                    <!-- User Gender Label -->
+                    <TextView
+                        android:id="@+id/userGenderLabelProfilePage"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Gender:"
+                        android:textColor="@color/cloud_white"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/userAgeLabelProfilePage" />
+
+                    <!-- User Gender Value -->
+                    <EditText
+                        android:id="@+id/userGenderValueProfilePage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@android:color/transparent"
+                        android:enabled="false"
+                        android:text="user-gender"
+                        android:textColor="@color/earthy_soil"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/userGenderLabelProfilePage"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/userGenderLabelProfilePage"
+                        app:layout_constraintTop_toTopOf="@+id/userGenderLabelProfilePage" />
+
+                    <!-- User Username Label -->
+                    <TextView
+                        android:id="@+id/userUsernameLabelProfilePage"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Username:"
+                        android:textColor="@color/cloud_white"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/userGenderLabelProfilePage" />
+
+                    <!-- User Username Value -->
+                    <EditText
+                        android:id="@+id/userUsernameValueProfilePage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@android:color/transparent"
+                        android:enabled="false"
+                        android:text="user-username"
+                        android:textColor="@color/earthy_soil"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/userUsernameLabelProfilePage"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/userUsernameLabelProfilePage"
+                        app:layout_constraintTop_toTopOf="@+id/userUsernameLabelProfilePage" />
+
+                    <!-- User Email Label -->
+                    <TextView
+                        android:id="@+id/userEmailLabelProfilePage"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Email:"
+                        android:textColor="@color/cloud_white"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/userUsernameLabelProfilePage" />
+
+                    <!-- User Email Value -->
+                    <EditText
+                        android:id="@+id/userEmailValueProfilePage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@android:color/transparent"
+                        android:enabled="false"
+                        android:text="user-email"
+                        android:textColor="@color/earthy_soil"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/userEmailLabelProfilePage"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/userEmailLabelProfilePage"
+                        app:layout_constraintTop_toTopOf="@+id/userEmailLabelProfilePage" />
+
+                    <!-- User Password Label -->
+                    <TextView
+                        android:id="@+id/userPasswordLabelProfilePage"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Password:"
+                        android:textColor="@color/cloud_white"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/userEmailLabelProfilePage" />
+
+                    <!-- User Password Value -->
+                    <EditText
+                        android:id="@+id/userPasswordValueProfilePage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@android:color/transparent"
+                        android:enabled="false"
+                        android:text="• • • • • • • • • •"
+                        android:textColor="@color/earthy_soil"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/userPasswordLabelProfilePage"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/userPasswordLabelProfilePage"
+                        app:layout_constraintTop_toTopOf="@+id/userPasswordLabelProfilePage" />
+
+                    <!-- User Join Date Label -->
+                    <TextView
+                        android:id="@+id/userJoinDateLabelProfilePage"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Join Date:"
+                        android:textColor="@color/cloud_white"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/userPasswordLabelProfilePage" />
+
+                    <!-- User Join Date Value -->
+                    <EditText
+                        android:id="@+id/userJoinDateValueProfilePage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@android:color/transparent"
+                        android:enabled="false"
+                        android:text="user-join-date"
+                        android:textColor="@color/earthy_soil"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/userJoinDateLabelProfilePage"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/userJoinDateLabelProfilePage"
+                        app:layout_constraintTop_toTopOf="@+id/userJoinDateLabelProfilePage" />
+
+                    <!-- User Meditation Rank Label -->
+                    <TextView
+                        android:id="@+id/userMeditationRankLabelProfilePage"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Rank:"
+                        android:textColor="@color/cloud_white"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/userJoinDateLabelProfilePage" />
+
+                    <!-- User Meditation Rank Value -->
+                    <EditText
+                        android:id="@+id/userMeditationRankValueProfilePage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@android:color/transparent"
+                        android:enabled="false"
+                        android:text="user-meditation-rank"
+                        android:textColor="@color/earthy_soil"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/userMeditationRankLabelProfilePage"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/userMeditationRankLabelProfilePage"
+                        app:layout_constraintTop_toTopOf="@+id/userMeditationRankLabelProfilePage" />
+
+                    <!-- Edit Account Details Button -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/editAccountButtonContainerProfilePage"
+                        android:layout_width="175dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="15dp"
+                        app:cardBackgroundColor="@color/earthy_soil"
+                        app:cardCornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/userMeditationRankLabelProfilePage">
+
+                        <Button
+                            android:id="@+id/editAccountButtonProfilePage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:text="Edit Profile"
+                            android:textColor="@color/cloud_white"
+                            android:textSize="15sp" />
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
 
             <!-- User Recent Activity -->
 
