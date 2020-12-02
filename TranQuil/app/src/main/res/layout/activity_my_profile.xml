@@ -81,7 +81,7 @@
                     android:id="@+id/cardView"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="25dp"
                     app:cardBackgroundColor="@android:color/transparent"
                     app:cardCornerRadius="100dp"
                     app:cardElevation="0dp"
@@ -123,7 +123,7 @@
                     android:layout_marginBottom="15dp"
                     android:gravity="center"
                     android:text="user-meditation-rank"
-                    android:textColor="@color/sandy_beach"
+                    android:textColor="@color/cloud_white"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -131,9 +131,9 @@
                     app:layout_constraintTop_toBottomOf="@+id/userFullNameProfilePage" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- Profile Header Separator -->
+            <!-- Separator -->
             <View
-                android:id="@+id/headerSeparatorProfilePage"
+                android:id="@+id/separator1ProfilePage"
                 android:layout_width="350dp"
                 android:layout_height="2dp"
                 android:background="@color/sandy_beach"
@@ -142,7 +142,112 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <!-- User Accomplishments -->
-            
+            <LinearLayout
+                android:id="@+id/userAccomplishmentsContainer"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/separator1ProfilePage"
+                app:layout_constraintStart_toStartOf="@+id/separator1ProfilePage"
+                app:layout_constraintTop_toBottomOf="@+id/separator1ProfilePage">
+
+                <!-- Time Meditated -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical">
+
+                    <!-- User Minutes Spent Meditating -->
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/sandy_beach"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- Label -->
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="minutes spent meditating"
+                        android:textColor="@color/cloud_white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!-- Lessons Completed -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical">
+
+                    <!-- User's Number of Lessons Completed -->
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/sandy_beach"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- Label -->
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="lessons completed"
+                        android:textColor="@color/cloud_white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!-- Activities Completed -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical">
+
+                    <!-- User's Number of Activities Completed -->
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/sandy_beach"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- Label -->
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="activities completed"
+                        android:textColor="@color/cloud_white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Separator -->
+            <View
+                android:id="@+id/separator2ProfilePage"
+                android:layout_width="350dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/sandy_beach"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userAccomplishmentsContainer" />
 
             <!-- User Accomplishments Separator -->
 
