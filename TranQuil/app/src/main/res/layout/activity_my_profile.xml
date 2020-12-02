@@ -308,7 +308,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="15dp"
-                        android:background="@color/grassy_fields"
+                        android:background="@android:color/transparent"
                         android:enabled="false"
                         android:text="user-full-name"
                         android:textColor="@color/earthy_soil"
