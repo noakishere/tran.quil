@@ -564,14 +564,12 @@
                             android:layout_gravity="center"
                             android:background="@android:color/transparent"
                             android:text="Edit Profile"
+                            android:textStyle="bold"
                             android:textColor="@color/cloud_white"
                             android:textSize="15sp" />
                     </androidx.cardview.widget.CardView>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
-
-            <!-- User Recent Activity -->
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

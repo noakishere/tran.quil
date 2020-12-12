@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/sky_blue"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Account Information Label -->
+    <TextView
+        android:id="@+id/accountInformationLabelUpdateProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Account Information:"
+        android:textColor="@color/cloud_white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- User Full Name Label -->
+    <TextView
+        android:id="@+id/userNameLabelUpdateProfile"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Name:"
+        android:textColor="@color/cloud_white"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accountInformationLabelUpdateProfile" />
+
+    <!-- User Full Name Value -->
+    <EditText
+        android:id="@+id/userNameValueUpdateProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:background="@android:drawable/editbox_background"
+        android:text="user-full-name"
+        android:textColor="@color/earthy_soil"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/userNameLabelUpdateProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userNameLabelUpdateProfile"
+        app:layout_constraintTop_toTopOf="@+id/userNameLabelUpdateProfile" />
+
+    <!-- User Age Label -->
+    <TextView
+        android:id="@+id/userAgeLabelUpdateProfile"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Age:"
+        android:textColor="@color/cloud_white"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userNameLabelUpdateProfile" />
+
+    <!-- User Age Value -->
+    <EditText
+        android:id="@+id/userAgeValueUpdateProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:background="@android:drawable/editbox_background"
+        android:text="user-age"
+        android:textColor="@color/earthy_soil"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/userAgeLabelUpdateProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userAgeLabelUpdateProfile"
+        app:layout_constraintTop_toTopOf="@+id/userAgeLabelUpdateProfile" />
+
+    <!-- User Gender Label -->
+    <TextView
+        android:id="@+id/userGenderLabelUpdateProfile"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Gender:"
+        android:textColor="@color/cloud_white"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userAgeLabelUpdateProfile" />
+
+    <!-- User Gender Value -->
+    <EditText
+        android:id="@+id/userGenderValueUpdateProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:background="@android:drawable/editbox_background"
+        android:text="user-gender"
+        android:textColor="@color/earthy_soil"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/userGenderLabelUpdateProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userGenderLabelUpdateProfile"
+        app:layout_constraintTop_toTopOf="@+id/userGenderLabelUpdateProfile" />
+
+    <!-- User Email Label -->
+    <TextView
+        android:id="@+id/userEmailLabelUpdateProfile"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:gravity="right"
+        android:text="Email:"
+        android:textColor="@color/cloud_white"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userGenderLabelUpdateProfile" />
+
+    <!-- User Email Value -->
+    <EditText
+        android:id="@+id/userEmailValueUpdateProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:background="@android:drawable/editbox_background"
+        android:text="user-email"
+        android:textColor="@color/earthy_soil"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/userEmailLabelUpdateProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userEmailLabelUpdateProfile"
+        app:layout_constraintTop_toTopOf="@+id/userEmailLabelUpdateProfile" />
+
+    <!-- User Password Label -->
+    <TextView
+        android:id="@+id/userPasswordLabelUpdateProfile"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:text="Password:"
+        android:textColor="@color/cloud_white"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userEmailLabelUpdateProfile" />
+
+    <!-- User Password Value -->
+    <EditText
+        android:id="@+id/userPasswordValueUpdateProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:background="@android:drawable/editbox_background"
+        android:text="user-password"
+        android:textColor="@color/earthy_soil"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/userPasswordLabelUpdateProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userPasswordLabelUpdateProfile"
+        app:layout_constraintTop_toTopOf="@+id/userPasswordLabelUpdateProfile" />
+
+    <!-- User Confirm Password Label -->
+    <TextView
+        android:id="@+id/userConfirmPasswordLabelUpdateProfile"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:text="Confirm:"
+        android:textColor="@color/cloud_white"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userPasswordLabelUpdateProfile" />
+
+    <!-- User Confirm Password Value -->
+    <EditText
+        android:id="@+id/userConfirmPasswordValueUpdateProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:background="@android:drawable/editbox_background"
+        android:text="user-password"
+        android:textColor="@color/earthy_soil"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/userConfirmPasswordLabelUpdateProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userPasswordLabelUpdateProfile"
+        app:layout_constraintTop_toTopOf="@+id/userConfirmPasswordLabelUpdateProfile" />
+
+    <!-- Edit Account Details Button -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/editAccountButtonContainerUpdateProfile"
+        android:layout_width="175dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="@color/grassy_fields"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userConfirmPasswordValueUpdateProfile">
+
+        <Button
+            android:id="@+id/editAccountButtonUpdateProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:text="Update Profile"
+            android:textColor="@color/cloud_white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,9 +2,14 @@ package com.example.tranquil;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +28,7 @@ public class MyProfile extends AppCompatActivity {
     EditText userJoinDateEditText, userMeditationRankEditText;
 
     String previousActivity;
+    private Activity context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +101,23 @@ public class MyProfile extends AppCompatActivity {
         editAccountBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
+                // Declare variables
+
+                // Collect user data from database
+
+                // Create and show dialog
+                AlertDialog.Builder builder = new AlertDialog.Builder(MyProfile.this);
+                ViewGroup viewGroup = findViewById(android.R.id.content);
+                View dialogView = LayoutInflater.from(v.getContext()).inflate(R.layout.dialog_update_profile, viewGroup, false);
+                builder.setView(dialogView);
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+                // Initialize and assign variables
+
+                // Set data on EditText (dialog box)
+
+                // Update button on-click listener
             }
         });
     }
