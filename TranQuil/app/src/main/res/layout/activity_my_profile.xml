@@ -567,6 +567,19 @@
                             android:textStyle="bold"
                             android:textColor="@color/cloud_white"
                             android:textSize="15sp" />
+
+                        <Button
+                            android:id="@+id/updateAccountButtonProfilePage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:text="Update"
+                            android:textStyle="bold"
+                            android:textColor="@color/cloud_white"
+                            android:textSize="15sp"
+                            android:visibility="invisible"
+                            android:onClick="updateProfile"/>
                     </androidx.cardview.widget.CardView>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
