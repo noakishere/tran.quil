@@ -1,5 +1,6 @@
 package com.example.tranquil;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -17,6 +18,13 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+
 import org.w3c.dom.Text;
 
 public class MyProfile extends AppCompatActivity {
@@ -27,6 +35,10 @@ public class MyProfile extends AppCompatActivity {
     EditText userFullNameEditText, userAgeEditText, userGenderEditText, userUsernameEditText, userEmailEditText;
     EditText userJoinDateEditText, userMeditationRankEditText;
 
+    FirebaseAuth fAuth;
+    FirebaseFirestore fStore;
+    String userID;
+
     String previousActivity;
     private Activity context;
 
@@ -36,6 +48,8 @@ public class MyProfile extends AppCompatActivity {
         requestWindowFeature((Window.FEATURE_NO_TITLE)); // hide the title
         getSupportActionBar().hide(); // hide the title bar
         setContentView(R.layout.activity_my_profile);
+
+
 
         // Collecting added details from created Intent
         Intent intent = getIntent();
@@ -63,6 +77,23 @@ public class MyProfile extends AppCompatActivity {
         // declaring ImageButtons
         appSettingsBtn = (ImageButton)findViewById(R.id.appSettingsMyProfilePage);
         exitProfileSettingsBtn = (ImageButton)findViewById(R.id.exitMyProfileSettingsBtn);
+
+        // initializing firebase stuff
+        fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
+        userID = fAuth.getCurrentUser().getUid();
+        DocumentReference documentReference = fStore.collection("users").document(userID);
+        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                userFullNameTextView.setText(value.getString("fName"));
+                userFullNameEditText.setText(value.getString("fName"));
+                userAgeEditText.setText(value.get("age").toString());
+                userGenderEditText.setText(value.getString("gender"));
+                userEmailEditText.setText(value.getString("email"));
+                userJoinDateEditText.setText(value.getDate("joinedDate").toString());
+            }
+        });
 
         // registering click events for top navigation
         appSettingsBtn.setOnClickListener(new View.OnClickListener() {
