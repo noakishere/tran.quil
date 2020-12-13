@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -82,6 +83,7 @@ public class Register extends AppCompatActivity {
                             user.put("email", email);
                             user.put("age" , 0);
                             user.put("gender" , "unknown");
+                            user.put("joinedDate", new Date());
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
