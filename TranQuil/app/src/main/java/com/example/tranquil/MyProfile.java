@@ -87,9 +87,6 @@ public class MyProfile extends AppCompatActivity {
                     case "DiscoverPage":
                         intent = new Intent(getApplicationContext(), Discover.class);
                         break;
-                    case "SosPage":
-                        intent = new Intent(getApplicationContext(), sos.class);
-                        break;
                     default:
                         intent = new Intent(getApplicationContext(), MainMenu.class);
                 }

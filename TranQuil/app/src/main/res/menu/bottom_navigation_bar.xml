@@ -21,9 +21,4 @@
         android:icon="@drawable/ic_nav_discover"
         android:title="Discover"
         app:showAsAction="always"/>
-    <item
-        android:id="@+id/sosPage"
-        android:icon="@drawable/ic_nav_sos"
-        android:title="SOS"
-        app:showAsAction="always"/>
 </menu>

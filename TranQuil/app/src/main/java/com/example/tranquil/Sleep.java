@@ -110,10 +110,6 @@ public class Sleep extends AppCompatActivity {
                         Intent intentDiscover = new Intent(Sleep.this, Discover.class);
                         startActivity(intentDiscover);
                         return true;
-                    case R.id.sosPage:
-                        Intent intentSOS = new Intent(Sleep.this, sos.class);
-                        startActivity(intentSOS);
-                        return true;
                 }
                 return true;
             }

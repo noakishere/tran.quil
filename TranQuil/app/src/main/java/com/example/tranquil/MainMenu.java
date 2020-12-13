@@ -70,10 +70,6 @@ public class MainMenu extends AppCompatActivity {
                         Intent intentDiscover = new Intent(MainMenu.this, Discover.class);
                         startActivity(intentDiscover);
                         return true;
-                    case R.id.sosPage:
-                        Intent intentSOS = new Intent(MainMenu.this, sos.class);
-                        startActivity(intentSOS);
-                        return true;
                 }
                 return false;
             }
