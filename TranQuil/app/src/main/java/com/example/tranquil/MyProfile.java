@@ -41,7 +41,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MyProfile extends AppCompatActivity {
-    ImageButton appSettingsBtn, exitProfileSettingsBtn;
+    ImageButton exitProfileSettingsBtn;
     Button editAccountBtn, updateAccountBtn;
     TextView userFullNameTextView, userMeditationRankTextView, userTimeSpentMeditatingTextView;
     TextView userLessonsCompletedTextView, userActivitiesCompletedTextView;
@@ -65,8 +65,6 @@ public class MyProfile extends AppCompatActivity {
         requestWindowFeature((Window.FEATURE_NO_TITLE)); // hide the title
         getSupportActionBar().hide(); // hide the title bar
         setContentView(R.layout.activity_my_profile);
-
-
 
         // Collecting added details from created Intent
         Intent intent = getIntent();
@@ -94,7 +92,6 @@ public class MyProfile extends AppCompatActivity {
         updateAccountBtn = (Button)findViewById(R.id.updateAccountButtonProfilePage);
 
         // declaring ImageButtons
-        appSettingsBtn = (ImageButton)findViewById(R.id.appSettingsMyProfilePage);
         exitProfileSettingsBtn = (ImageButton)findViewById(R.id.exitMyProfileSettingsBtn);
 
         // initializing firebase stuff
@@ -120,12 +117,6 @@ public class MyProfile extends AppCompatActivity {
         });
 
         // registering click events for top navigation
-        appSettingsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
-            }
-        });
         exitProfileSettingsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

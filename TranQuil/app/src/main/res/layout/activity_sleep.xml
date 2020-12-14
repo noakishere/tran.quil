@@ -16,20 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Application Settings ImageButton -->
-        <ImageButton
-            android:id="@+id/appSettingsSleepPage"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@android:color/transparent"
-            android:tint="@color/smooth_sandstone"
-            android:src="@drawable/ic_default_app_settings"
-            android:scaleType="fitCenter"/>
-
         <TextView
             android:layout_width="250dp"
             android:layout_height="35dp"
@@ -234,63 +220,6 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Sleepcast Exercises -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="125dp"
-                android:layout_marginTop="15dp"
-                app:cardCornerRadius="20dp"
-                app:cardBackgroundColor="@color/raincloud_blue">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/sleepcastExercisesContainer"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/sleepcastExerciseLabel"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginRight="10dp"
-                        android:text="Sleepcasts"
-                        android:textColor="@color/smooth_sandstone"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toStartOf="@+id/sleepcastExerciseImage"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/sleepcastExerciseDescription"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="15dp"
-                        android:text="Bedtime stories told by the most soothing of voices to ease you to sleep."
-                        android:textColor="@color/sandy_beach"
-                        android:textSize="15sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/sleepcastExerciseImage"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/sleepcastExerciseLabel" />
-
-                    <ImageView
-                        android:id="@+id/sleepcastExerciseImage"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_marginRight="15dp"
-                        android:background="@android:color/darker_gray"
-                        android:src="@drawable/ic_image"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
-
             <!-- Relaxing Sounds -->
             <TextView
                 android:id="@+id/relaxingSleepSoundsLabel"
@@ -364,7 +293,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="125dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginBottom="25dp"
+                android:layout_marginBottom="15dp"
                 app:cardCornerRadius="20dp"
                 app:cardBackgroundColor="@color/raincloud_blue">
 

@@ -17,8 +17,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Meditation extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-    ImageButton appSettingsBtn, myProfileBtn;
-    ConstraintLayout featuredActivity, guidedCourses, timedExercises, breathingExercises, meditationTechniques;
+    ImageButton myProfileBtn;
+    ConstraintLayout featuredActivity, guidedCourses, timedExercises, breathingExercises;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +33,9 @@ public class Meditation extends AppCompatActivity {
         guidedCourses = (ConstraintLayout)findViewById(R.id.meditationCoursesContainer);
         timedExercises = (ConstraintLayout)findViewById(R.id.timedMeditationExercisesContainer);
         breathingExercises = (ConstraintLayout)findViewById(R.id.breathingExercisesContainer);
-        meditationTechniques = (ConstraintLayout)findViewById(R.id.meditationTechniquesContainer);
 
         // declaring ImageButtons
         myProfileBtn = (ImageButton)findViewById(R.id.myProfileBtnMeditationPage);
-        appSettingsBtn = (ImageButton)findViewById(R.id.appSettingsMeditationPage);
 
         // registering click events for top navigation
         myProfileBtn.setOnClickListener(new View.OnClickListener() {
@@ -46,12 +44,6 @@ public class Meditation extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), MyProfile.class);
                 intent.putExtra("currentActivity", "MeditationPage");
                 startActivity(intent);
-            }
-        });
-        appSettingsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -75,12 +67,6 @@ public class Meditation extends AppCompatActivity {
             }
         });
         breathingExercises.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
-            }
-        });
-        meditationTechniques.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();

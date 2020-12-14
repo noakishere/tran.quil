@@ -17,20 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Application Settings ImageButton -->
-        <ImageButton
-            android:id="@+id/appSettingsMyProfilePage"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@android:color/transparent"
-            android:tint="@color/grassy_fields"
-            android:src="@drawable/ic_default_app_settings"
-            android:scaleType="fitCenter"/>
-
         <TextView
             android:layout_width="250dp"
             android:layout_height="35dp"

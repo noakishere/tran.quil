@@ -16,7 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Discover extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-    ImageButton appSettingsBtn, myProfileBtn;
+    ImageButton myProfileBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +28,6 @@ public class Discover extends AppCompatActivity {
 
         // declaring ImageButtons
         myProfileBtn = (ImageButton)findViewById(R.id.myProfileBtnDiscoverPage);
-        appSettingsBtn = (ImageButton)findViewById(R.id.appSettingsDiscoverPage);
-
         // registering click events for top navigation
         myProfileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,12 +35,6 @@ public class Discover extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), MyProfile.class);
                 intent.putExtra("currentActivity", "DiscoverPage");
                 startActivity(intent);
-            }
-        });
-        appSettingsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
             }
         });
 

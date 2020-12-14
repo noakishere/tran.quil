@@ -17,8 +17,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Sleep extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-    ImageButton appSettingsBtn, myProfileBtn;
-    ConstraintLayout featuredActivity, windDownActivity, sleepcastActivity, soundEscapeActivity, sleepMusicActivity;
+    ImageButton myProfileBtn;
+    ConstraintLayout featuredActivity, windDownActivity, soundEscapeActivity, sleepMusicActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +32,11 @@ public class Sleep extends AppCompatActivity {
         // declaring ConstraintLayouts
         featuredActivity = (ConstraintLayout)findViewById(R.id.featuredSleepExercise);
         windDownActivity = (ConstraintLayout)findViewById(R.id.windDownExercisesContainer);
-        sleepcastActivity = (ConstraintLayout)findViewById(R.id.sleepcastExercisesContainer);
         soundEscapeActivity = (ConstraintLayout)findViewById(R.id.soundEscapesContainer);
         sleepMusicActivity = (ConstraintLayout)findViewById(R.id.sleepMusicContainer);
 
         // declaring ImageButtons
         myProfileBtn = (ImageButton)findViewById(R.id.myProfileBtnSleepPage);
-        appSettingsBtn = (ImageButton)findViewById(R.id.appSettingsSleepPage);
 
         // set highlighted menu
         Menu menu = bottomNavigationView.getMenu();
@@ -54,12 +52,6 @@ public class Sleep extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        appSettingsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
-            }
-        });
 
         // registering click events for sleep activities
         featuredActivity.setOnClickListener(new View.OnClickListener() {
@@ -69,12 +61,6 @@ public class Sleep extends AppCompatActivity {
             }
         });
         windDownActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
-            }
-        });
-        sleepcastActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
