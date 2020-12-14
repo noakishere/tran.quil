@@ -45,7 +45,7 @@ public class MyProfile extends AppCompatActivity {
     Button editAccountBtn, updateAccountBtn;
     TextView userFullNameTextView, userMeditationRankTextView, userTimeSpentMeditatingTextView;
     TextView userLessonsCompletedTextView, userActivitiesCompletedTextView;
-    EditText userFullNameEditText, userAgeEditText, userGenderEditText, userUsernameEditText, userEmailEditText;
+    EditText userFullNameEditText, userAgeEditText, userGenderEditText, userEmailEditText;
     EditText userJoinDateEditText, userMeditationRankEditText, userPasswordEditText;
 
     FirebaseAuth fAuth;
@@ -81,7 +81,6 @@ public class MyProfile extends AppCompatActivity {
         userFullNameEditText = (EditText)findViewById(R.id.userNameValueProfilePage);
         userAgeEditText = (EditText)findViewById(R.id.userAgeValueProfilePage);
         userGenderEditText = (EditText)findViewById(R.id.userGenderValueProfilePage);
-        userUsernameEditText = (EditText)findViewById(R.id.userUsernameValueProfilePage);
         userEmailEditText = (EditText)findViewById(R.id.userEmailValueProfilePage);
         userJoinDateEditText = (EditText)findViewById(R.id.userJoinDateValueProfilePage);
         userMeditationRankEditText = (EditText)findViewById(R.id.userMeditationRankValueProfilePage);
