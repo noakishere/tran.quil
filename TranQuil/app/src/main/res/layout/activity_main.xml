@@ -158,34 +158,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButtonContainerLoginPage" />
-
-    <!-- Social Media links -->
-    <LinearLayout
-        android:id="@+id/socialLinksContainerLoginPage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="25dp"
-        android:gravity="center_horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:orientation="horizontal">
-
-        <!-- Facebook link -->
-<!--        <ImageButton-->
-<!--            android:layout_width="45dp"-->
-<!--            android:layout_height="45dp"-->
-<!--            android:background="@android:color/transparent"-->
-<!--            android:src="@drawable/ic_default_facebook"-->
-<!--            android:tint="@color/cloud_white"-->
-<!--            android:scaleType="fitCenter"/>-->
-
-        <!-- Twitter link -->
-
-        <!-- Instagram link -->
-
-        <!-- YouTube link -->
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
