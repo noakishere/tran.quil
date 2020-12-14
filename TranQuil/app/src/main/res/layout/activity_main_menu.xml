@@ -64,62 +64,81 @@
             android:layout_marginRight="16dp"
             android:orientation="vertical">
 
-            <!-- Today's Featured Meditation Exercise -->
+            <!-- Quote of the Day -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/featuredMeditationExercise"
+                android:id="@+id/dailyQuoteContainerMainMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+                <!-- Quote of the Day Title -->
                 <TextView
-                    android:id="@+id/featuredLabelMeditationPage"
+                    android:id="@+id/dailyQuoteTitleMainMenu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
-                    android:text="Featured"
-                    android:textColor="@color/cloud_white"
-                    android:textSize="15sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/featuredTitleMeditationPage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Example Title"
-                    android:textColor="@color/cloud_white"
+                    android:text="Quote of the Day"
+                    android:textColor="@color/sandy_beach"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/featuredLabelMeditationPage" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
+                <!-- Quote TextView -->
                 <TextView
-                    android:id="@+id/featuredExerciseTypeMeditationPage"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/dailyQuoteTextViewMainMenu"
+                    android:layout_width="325dp"
                     android:layout_height="wrap_content"
-                    android:text="exercise-type"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="daily-quote-here"
                     android:textColor="@color/cloud_white"
-                    android:textSize="13sp"
+                    android:textSize="21sp"
+                    android:textStyle="bold|italic"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/featuredTitleMeditationPage" />
+                    app:layout_constraintTop_toBottomOf="@+id/featuredImageMeditationPage" />
 
+                <!-- Quote's Author TextView -->
+                <TextView
+                    android:id="@+id/dailyQuoteAuthorTextViewMainMenu"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="- author"
+                    android:textColor="@color/cloud_white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dailyQuoteTextViewMainMenu" />
+
+                <!-- Quote ImageView -->
                 <ImageView
                     android:id="@+id/featuredImageMeditationPage"
                     android:layout_width="640px"
                     android:layout_height="360px"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="15dp"
                     android:background="@android:color/darker_gray"
                     android:src="@drawable/ic_image"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.497"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/featuredExerciseTypeMeditationPage"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintTop_toBottomOf="@+id/dailyQuoteTitleMainMenu" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Quote of the Day separation -->
+            <View
+                android:id="@+id/topNavigationBarSeparatorSleepPage"
+                android:layout_width="350dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/sandy_beach"
+                app:layout_constraintBottom_toBottomOf="@id/topNavigationSleepPage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
     </ScrollView>
 
