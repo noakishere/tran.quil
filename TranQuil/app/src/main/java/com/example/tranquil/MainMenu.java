@@ -49,7 +49,7 @@ public class MainMenu extends AppCompatActivity {
         randomQuote = findViewById(R.id.dailyQuoteTextViewMainMenu);
         quoteAuthor = findViewById(R.id.dailyQuoteAuthorTextViewMainMenu);
         mQueue = Volley.newRequestQueue(this);
-
+        jsonParse();
         // registering click events for top navigation
         myProfileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,7 +83,7 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
-        jsonParse();
+
     }
 
     private void jsonParse(){
@@ -97,7 +97,7 @@ public class MainMenu extends AppCompatActivity {
                             JSONArray jsonArray = response.getJSONArray("Quotes");
 
                             Random rand = new Random();
-                            int index = rand.nextInt((jsonArray.length() - 1) + 1) + 1;
+                            int index = rand.nextInt(jsonArray.length());
 
                             JSONObject jsonQuote = jsonArray.getJSONObject(index);
                             String jsonStr = jsonQuote.getString("quote");
