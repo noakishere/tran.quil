@@ -130,9 +130,6 @@ public class MyProfile extends AppCompatActivity {
                     case "SleepPage":
                         intent = new Intent(getApplicationContext(), Sleep.class);
                         break;
-                    case "DiscoverPage":
-                        intent = new Intent(getApplicationContext(), Discover.class);
-                        break;
                     default:
                         intent = new Intent(getApplicationContext(), MainMenu.class);
                 }

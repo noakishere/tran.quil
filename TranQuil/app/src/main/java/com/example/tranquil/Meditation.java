@@ -91,10 +91,6 @@ public class Meditation extends AppCompatActivity {
                         Intent intentSleep = new Intent(Meditation.this, Sleep.class);
                         startActivity(intentSleep);
                         return true;
-                    case R.id.discoverPage:
-                        Intent intentDiscover = new Intent(Meditation.this, Discover.class);
-                        startActivity(intentDiscover);
-                        return true;
                 }
                 return true;
             }

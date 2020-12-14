@@ -68,10 +68,6 @@ public class sos extends AppCompatActivity {
                         Intent intentDiscover = new Intent(sos.this, Sleep.class);
                         startActivity(intentDiscover);
                         return true;
-                    case R.id.discoverPage:
-                        Intent intentSOS = new Intent(sos.this, Discover.class);
-                        startActivity(intentSOS);
-                        return true;
                 }
                 return true;
             }

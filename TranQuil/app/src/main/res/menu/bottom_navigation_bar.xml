@@ -4,7 +4,7 @@
     <item
         android:id="@+id/mainMenuPage"
         android:icon="@drawable/ic_nav_main_menu"
-        android:title="Main Menu"
+        android:title="Discover"
         app:showAsAction="always"/>
     <item
         android:id="@+id/meditationPage"
@@ -15,10 +15,5 @@
         android:id="@+id/sleepPage"
         android:icon="@drawable/ic_nav_sleep"
         android:title="Sleep"
-        app:showAsAction="always"/>
-    <item
-        android:id="@+id/discoverPage"
-        android:icon="@drawable/ic_nav_discover"
-        android:title="Discover"
         app:showAsAction="always"/>
 </menu>

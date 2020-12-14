@@ -59,10 +59,6 @@ public class MainMenu extends AppCompatActivity {
                         Intent intentSleep = new Intent(MainMenu.this, Sleep.class);
                         startActivity(intentSleep);
                         return true;
-                    case R.id.discoverPage:
-                        Intent intentDiscover = new Intent(MainMenu.this, Discover.class);
-                        startActivity(intentDiscover);
-                        return true;
                 }
                 return false;
             }
