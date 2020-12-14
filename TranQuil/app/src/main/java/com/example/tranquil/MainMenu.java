@@ -87,7 +87,7 @@ public class MainMenu extends AppCompatActivity {
     }
 
     private void jsonParse(){
-        String url = "https://www.json-generator.com/api/json/get/bZLaMujvIi?indent=2";
+        String url = "https://www.json-generator.com/api/json/get/cfQZPEIFua?indent=2";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
