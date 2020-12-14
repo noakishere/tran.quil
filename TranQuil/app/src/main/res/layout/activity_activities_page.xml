@@ -22,7 +22,7 @@
             android:id="@+id/returnButtonActivitiesPage"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:layout_alignParentLeftt="true"
+            android:layout_alignParentLeft="true"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
@@ -57,19 +57,18 @@
             android:tint="@color/grassy_fields" />
     </RelativeLayout>
 
-    <!-- Selected Activity TextView -->
-
     <!-- Selected Activity RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/activities_recyclerview"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topNavigationActivitiesPage"
         tools:listitem="@layout/guided_meditation_exercises_list" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
