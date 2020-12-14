@@ -57,7 +57,9 @@ public class Meditation extends AppCompatActivity {
         guidedCourses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), "This feature is not yet supported...", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), ActivitiesPage.class);
+                startActivity(intent);
             }
         });
         timedExercises.setOnClickListener(new View.OnClickListener() {
@@ -96,4 +98,5 @@ public class Meditation extends AppCompatActivity {
             }
         });
     }
+
 }
