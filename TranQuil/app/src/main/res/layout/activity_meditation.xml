@@ -194,12 +194,13 @@
                         android:id="@+id/meditationCoursesImage"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:layout_marginRight="15dp"
-                        app:tint="@color/earthy_soil"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
                         android:src="@drawable/ic_default_meditation"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/earthy_soil" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
