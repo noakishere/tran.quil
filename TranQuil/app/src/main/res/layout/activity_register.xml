@@ -25,8 +25,7 @@
     <ImageView
         android:id="@+id/appLogoLoginScreen"
         android:layout_width="150dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="150dp"
         android:src="@drawable/ic_default_meditation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,12 +36,12 @@
     <!-- App Slogan -->
     <TextView
         android:id="@+id/appSloganLoginPage"
-        android:layout_width="wrap_content"
+        android:layout_width="325dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:text="@string/app_slogan"
         android:textColor="@color/cloud_white"
         android:textSize="22sp"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appLogoLoginScreen" />

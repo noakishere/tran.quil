@@ -1,7 +1,7 @@
 <resources>
     <!-- Application specific string resources -->
     <string name="app_name">Tran • Quil</string>
-    <string name="app_slogan">app-slogan-goes-here</string>
+    <string name="app_slogan">\"To know one\'s mind is nothing short of life-changing.\"</string>
 
     <!-- Login and Register page resources -->
     <string name="app_logo_desc">TranQuil\'s logo.</string>
